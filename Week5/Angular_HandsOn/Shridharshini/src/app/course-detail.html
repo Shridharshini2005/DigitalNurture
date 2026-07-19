@@ -1,0 +1,14 @@
+<section class="course-detail">
+  <p *ngIf="loading">Loading course...</p>
+  <ng-container *ngIf="!loading">
+    <div *ngIf="course; else missing">
+      <h2>{{ course.name }}</h2>
+      <p>Code: {{ course.code }}</p>
+      <p>Credits: {{ course.credits }}</p>
+      <p>Status: {{ course.gradeStatus }}</p>
+    </div>
+    <ng-template #missing>
+      <p>Course not found.</p>
+    </ng-template>
+  </ng-container>
+</section>
