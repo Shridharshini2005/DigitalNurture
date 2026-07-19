@@ -1,0 +1,11 @@
+.global-spinner {
+  padding: 0.35rem 1rem;
+  background: #fef9c3;
+  color: #713f12;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+main {
+  min-height: 60vh;
+}
