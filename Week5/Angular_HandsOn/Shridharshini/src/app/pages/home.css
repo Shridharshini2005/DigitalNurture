@@ -1,0 +1,41 @@
+.hero {
+  padding: 2rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stats-row {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.stat {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.5rem;
+  color: #1e2a38;
+}
+
+.stat span {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.search {
+  margin-top: 1.5rem;
+}
+
+.search input {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}

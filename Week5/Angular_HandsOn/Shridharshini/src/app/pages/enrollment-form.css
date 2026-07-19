@@ -1,0 +1,55 @@
+.form-page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.field.checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+label {
+  font-size: 0.85rem;
+  color: #334155;
+  margin-bottom: 0.25rem;
+}
+
+input,
+select {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.ng-invalid.ng-touched {
+  border-color: #dc2626;
+}
+
+.ng-valid.ng-touched {
+  border-color: #16a34a;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.success {
+  margin-top: 1rem;
+  color: #16a34a;
+  font-weight: 600;
+}
