@@ -1,0 +1,47 @@
+Hands-On 1, Task 1 — Notes on generated project files
+=======================================================
+
+angular.json
+  Workspace-wide build/test/serve configuration: file replacements, budgets,
+  asset paths, and which builder (esbuild-based application builder) runs
+  each Angular CLI command (build, serve, test).
+
+tsconfig.json
+  Base TypeScript compiler options shared by the whole workspace (strict
+  mode, target, module resolution); app and spec configs extend this file.
+
+tsconfig.app.json
+  TypeScript config specific to the application build — extends
+  tsconfig.json and narrows the `files`/`include` to app source, excluding
+  spec files.
+
+package.json
+  Lists npm scripts (ng, start, build, watch, test, mock-api) plus runtime
+  (@angular/*, @ngrx/*, rxjs) and dev (Angular CLI, Karma/Jasmine,
+  json-server) dependencies for the project.
+
+src/main.ts
+  Application entry point — bootstraps the standalone root component (App)
+  with the providers defined in app.config.ts. This is the first code that
+  runs in the browser.
+
+src/app/app.config.ts
+  Standalone equivalent of the old app.module.ts. Registers app-wide
+  providers: the router, HttpClient (with interceptors), and the NgRx store
+  / effects / devtools.
+
+src/app/app.ts
+  The root standalone component. Hosts the <app-header> and the
+  <router-outlet> that all page components render into.
+
+src/index.html
+  The single HTML page served to the browser. Contains the <app-root>
+  element that Angular bootstraps into, plus the page <head> metadata.
+
+Task 1, Step 5 — angular.json production budgets
+  Under architect > build > configurations > production > budgets, the
+  initial bundle budget defines maximumWarning and maximumError sizes.
+  maximumWarning logs a build warning once the bundle crosses that size;
+  maximumError fails the production build once the bundle exceeds the
+  larger threshold. These guardrails catch unintentional bundle bloat
+  before it reaches production.
